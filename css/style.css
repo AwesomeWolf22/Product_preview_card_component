@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+main {
+    width: 100vw; height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center; align-items: center;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.product-card {
+    width: 700px;
+    max-height: 525px;
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-card .image,
+.product-card .text {
+    width: 50%;
+}
+
+.product-card .image img {
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 16px 0 0 16px;
+}
+
+.product-card .image img.mobile {
+    display: none;
+}
+
+.product-card .text {
+    padding: 40px;
+}
+
+.product-card .text span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.product-card .text h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    margin: 20px 0;
+    color: hsl(212, 21%, 14%);
+    font-weight: normal;
+    font-size: 36px;
+}
+
+.product-card .text p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 22px;
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-card .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+}
+
+.product-card .text h2 {
+    display: inline-block;
+    font-family: 'Fraunces', serif;
+}
+
+.product-card .text h2.new {
+    font-size: 32px;
+    color: hsl(158, 36%, 37%);
+}
+
+.product-card .text h2.old {
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    position: relative;
+}
+
+.product-card .text h2.old .line {
+    width: 100%;
+    height: 1px;
+    background-color: hsl(228, 12%, 48%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.product-card .text button {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    border: 0; outline: 0;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    height: 42px;
+    border-radius: 8px;
+    font-family: 'Montserrat', serif;
+    cursor: pointer;
+}
+
+.product-card .text button:hover {
+    background-color: hsl(158, 36%, 24%);
+}
+
+@media screen and (max-width:780px) {
+
+    .product-card {
+        width: 80%;
+        max-width: 480px;
+        max-height: fit-content;
+        margin: 0 auto;
+    }
+
+    .product-card .image,
+    .product-card .text {
+        width: 100%;
+    }
+
+    .product-card .image {
+        height: 280px;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .product-card .image img.desktop {
+        display: none;
+    }
+
+    .product-card .image img.mobile {
+        display: block;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .product-card .text {
+        height: calc(100% - 280px);
+        padding: 20px;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+
+    .product-card {
+        max-width: 480px;
+    }
+
+    .product-card .text {
+        padding: 20px;
+    }
+
+}
